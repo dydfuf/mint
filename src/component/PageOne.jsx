@@ -18,7 +18,7 @@ export default function PageOne() {
   };
 
   const up = () => {
-    if (mintCount >= 10) return;
+    if (mintCount >= 2) return;
     setMintCount((prev) => prev + 1);
   };
 
