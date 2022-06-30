@@ -23,3 +23,9 @@ export const enableKlaytn = async () => {
 export const disableKlaytn = async () => {
   await window.klaytn.disable();
 };
+
+export const accountTruncate = (account) => {
+  const first = String(account[0]).substring(0, 6);
+  const end = String(account[0].split("").reverse().join("")).substring(0, 4);
+  return first + " ... " + end;
+};

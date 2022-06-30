@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import { useState } from "react";
-import { enableKlaytn } from "../utils.js";
+import { enableKlaytn, accountTruncate } from "../utils.js";
 
 export default function PageOne() {
-  const [mintCount, setMintCount] = useState(1);
+  const [mintCount, setMintCount] = useState(0);
 
   const [accounts, setAccounts] = useState([]);
   const [isEnabled, setIsEnabled] = useState(false);
@@ -18,6 +18,7 @@ export default function PageOne() {
   };
 
   const up = () => {
+    if (mintCount >= 10) return;
     setMintCount((prev) => prev + 1);
   };
 
@@ -30,8 +31,8 @@ export default function PageOne() {
   return (
     <div className="flex flex-col ">
       <button className="ml-auto w-[224px] h-44 rounded-[6px] border-white border-[1px] mt-68">
-        <span className="text-white" onClick={handleConnectClick}>
-          {isEnabled ? accounts : `Connect Kaikas`}
+        <span className="text-white text-[18px]" onClick={handleConnectClick}>
+          {isEnabled ? accountTruncate(accounts) : `Connect Kaikas`}
         </span>
       </button>
       <p className="text-white mt-10 text-[64px] font-bold mx-auto">

@@ -7,6 +7,4 @@ const rpcURL = BAOBAB_TESTNET_RPC_URL;
 
 const caver = new Caver(rpcURL);
 
-console.log({ caver });
-
 export default caver;
