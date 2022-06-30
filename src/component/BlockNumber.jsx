@@ -17,7 +17,7 @@ export default function BlockNumber() {
 
   return (
     <div className="mx-auto mt-40">
-      <div className="flex flex-row space-x-[110px] mr-[-100px]">
+      <div className="flex flex-row space-x-[110px] ml-[-100px]">
         <div className="text-white">
           <div className="absolute">
             <div
