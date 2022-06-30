@@ -4,7 +4,7 @@ import { useState } from "react";
 import { enableKlaytn, accountTruncate } from "../utils.js";
 
 export default function PageOne() {
-  const [mintCount, setMintCount] = useState(0);
+  const [mintCount, setMintCount] = useState(1);
 
   const [accounts, setAccounts] = useState([]);
   const [isEnabled, setIsEnabled] = useState(false);
